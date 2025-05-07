@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1cb61c;
+            overflow: hidden;
+        }
+
+        .moving-text {
+            font-size: 2rem;
+            font-weight: bold;
+            position: absolute;
+            right: -200px; /* Start from outside the screen */
+        }
+    </style>
+</head>
+<body>
+    <div class="moving-text">Hello, World!</div>
+
+    <script>
+        gsap.to(".moving-text", { x: "-50vw", duration: 2, ease: "power2.out" });
+    </script>
+</body>
+</html>

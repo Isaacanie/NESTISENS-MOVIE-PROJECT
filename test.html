@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .search-section {
+      margin: 20px;
+    }
+
+    #searchInput {
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+    }
+
+    #searchResults {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    #searchResults span {
+      display: inline-block;
+      margin: 5px;
+      padding: 5px 10px;
+      background-color: #f0f0f0;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .dump {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .vid-wrap {
+      width: 320px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+<div class="search-section">
+  <input type="text" id="searchInput" placeholder="Search for a movie...">
+  <div id="searchResults"></div>
+</div>
+
+<section id="movieSection">
+  <!-- Movie blocks here (same as you already have) -->
+  <div class="dump">
+    <div class="vid-wrap" data-title="In The Tall Grass">
+      <img src="./assets/in-the-tall-grass.jpeg" class="thumbnail">
+      <h2>In The Tall Grass<span></span></h2>
+      <a href=""><button>watch now</button></a>
+    </div>
+    <div class="vid-wrap" data-title="Fractured">
+      <img src="./assets/fractured.jpeg" class="thumbnail">
+      <h2>Fractured<span></span></h2>
+      <a href=""><button>watch now</button></a>
+    </div>
+    <div class="vid-wrap" data-title="Death Whisperer 2">
+      <img src="./assets/death-whisperer-2.jpeg" class="thumbnail">
+      <h2>Death Whisperer 2<span></span></h2>
+      <a href=""><button>watch now</button></a>
+    </div>
+    <div class="vid-wrap" data-title="The Offering">
+      <img src="./assets/the-offering.jpeg" class="thumbnail">
+      <h2>The Offering<span></span></h2>
+      <a href=""><button>watch now</button></a>
+    </div>
+    <div class="vid-wrap" data-title="Get In">
+      <img src="./assets/get-in.jpeg" class="thumbnail">
+      <h2>Get In<span></span></h2>
+      <a href=""><button>watch now</button></a>
+    </div>
+    <div class="vid-wrap" data-title="Thanksgiving">
+      <img src="./assets/thanksgiving-pics.jpeg" class="thumbnail">
+      <h2>Thanksgiving<span></span></h2>
+      <a href=""><button>watch now</button></a>
+    </div>
+    <div class="vid-wrap" data-title="Happy Death Day 2U">
+      <img src="./assets/happy-death-day-2u.jpeg" class="thumbnail">
+      <h2>Happy Death Day 2U<span></span></h2>
+      <a href=""><button>watch now</button></a>
+    </div>
+    <div class="vid-wrap" data-title="Totally Killer">
+      <img src="./assets/totally-killer.jpeg" class="thumbnail">
+      <h2>Totally Killer<span></span></h2>
+      <a href=""><button>watch now</button></a>
+    </div>
+    <div class="vid-wrap" data-title="Blood Red Sky">
+      <img src="./assets/bloody-red-sky.jpeg" class="thumbnail">
+      <h2>Blood Red Sky<span></span></h2>
+      <a href=""><button>watch now</button></a>
+    </div>
+  </div>
+</section>
+<section id="movieSection">
+  <div class="dump">
+    <div class="vid-wrap" data-title="In The Tall Grass">
+      <img src="./assets/in-the-tall-grass.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+      <video width="320" height="240" controls>
+        <source src="" type="video/mp4">
+        <source src="" type="video/ogg">
+     </video>
+     <h2>In The Tall Grass<span></span></h2>
+     <a href="" class="watch"><button>watch now</button></a>
+    </div>
+    <div class="vid-wrap">
+        <img src="./assets/fractured.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+      <video width="320" height="240" controls>
+          <source src="" type="video/mp4">
+          <source src="" type="video/ogg">
+      </video>
+      <h2>Fractured <span></span></h2>
+      <a href="" class="watch"><button>watch now</button></a>
+    </div>
+    <div class="vid-wrap">
+        <img src="./assets/death-whisperer-2.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+      <video width="320" height="240" controls>
+          <source src="" type="video/mp4">
+          <source src="" type="video/ogg">
+      </video>
+      <h2>Death Whisperer 2<span></span></h2>
+      <a href="" class="watch"><button>watch now</button></a>
+    </div>
+  </div>
+  <div class="dump">
+    <div class="vid-wrap">
+        <img src="./assets/the-offering.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+      <video width="320" height="240" controls>
+          <source src="" type="video/mp4">
+          <source src="" type="video/ogg">
+      </video>
+      <h2>The Offering <span></span></h2>
+      <a href="" class="watch"><button>watch now</button></a>
+    </div>
+    <div class="vid-wrap">
+        <img src="./assets/get-in.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+      <video width="320" height="240" controls>
+          <source src="" type="video/mp4">
+          <source src="" type="video/ogg">
+      </video>
+      <h2>Get In<span></span></h2>
+      <a href="" class="watch"><button>watch now</button></a>
+    </div>
+    <div class="vid-wrap">
+      <img src="./assets/thanksgiving-pics.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+      <video width="320" height="240" controls>
+        <source src="" type="video/mp4">
+        <source src="" type="video/ogg">
+      </video>
+      <h2>Thanksgiving<span></span></h2>
+      <a href="" class="watch"><button>watch now</button></a>
+    </div>
+  </div>
+  <div class="dump">
+    <div class="vid-wrap">
+        <img src="./assets/happy-death-day-2u.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+      <video width="320" height="240" controls>
+          <source src="" type="video/mp4">
+          <source src="" type="video/ogg">
+      </video>
+      <h2>Happy Death Day 2U<span></span></h2>
+      <a href="" class="watch"><button>watch now</button></a>
+    </div>
+    <div class="vid-wrap">
+        <img src="./assets/totally-killer.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+      <video width="320" height="240" controls>
+          <source src="" type="video/mp4">
+          <source src="" type="video/ogg">
+      </video>
+      <h2>Totally Killer <span></span></h2>
+      <a href="" class="watch"><button>watch now</button></a>
+    </div>
+    <div class="vid-wrap">
+        <img src="./assets/bloody-red-sky.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+      <video width="320" height="240" controls>
+          <source src="" type="video/mp4">
+          <source src="" type="video/ogg">
+      </video>
+      <h2>Blood Red Sky<span></span></h2>
+      <a href="" class="watch"><button>watch now</button></a>
+    </div>
+  </div>
+</section>
+<script>
+  const searchInput = document.getElementById("searchInput");
+  const searchResults = document.getElementById("searchResults");
+  const movieSection = document.getElementById("movieSection");
+  const movieBlocks = movieSection.querySelectorAll(".vid-wrap");
+
+  // Movie list for search (used for matching)
+  const movieTitles = [
+    "In The Tall Grass",
+    "Fractured",
+    "Death Whisperer 2",
+    "The Offering",
+    "Get In",
+    "Thanksgiving",
+    "Happy Death Day 2U",
+    "Totally Killer",
+    "Blood Red Sky"
+  ];
+
+  // Function to update the search results
+  searchInput.addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    searchResults.innerHTML = "";
+
+    if (query === "") {
+      movieBlocks.forEach(block => block.classList.remove("hidden"));
+      return;
+    }
+
+    const matched = movieTitles.filter(title => title.toLowerCase().includes(query));
+
+    matched.forEach(title => {
+      const span = document.createElement("span");
+      span.textContent = `[${title}]`;
+      span.addEventListener("click", () => {
+        // Hide the movie block
+        movieBlocks.forEach(block => {
+          if (block.dataset.title === title) {
+            block.classList.add("hidden");
+          }
+        });
+        // Remove the tag
+        span.remove();
+      });
+      searchResults.appendChild(span);
+    });
+
+    // Hide unmatched movies
+    movieBlocks.forEach(block => {
+      const title = block.dataset.title.toLowerCase();
+      block.classList.toggle("hidden", !title.includes(query));
+    });
+  });
+
+  
+</script>
+
+</body>
+</html>

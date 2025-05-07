@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmpire</title>
+    <link rel="stylesheet" href="./CSS/horror.css">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    
+    <section class="hero">
+        <!-- <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="./assets/filmpire.png" alt="">
+                </div>
+                <a href="./chat.html"><button class="btn">Chat</button></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><div class="dropdown">
+                            <button class="dropbtn">Categories</button>
+                            <div class="dropdown-content">
+                                <a href="./action.html">Action Movies</a>
+                                <a href="./nigeria.html">Nigerians Movies</a>
+                                <a href="./cartoon.html">Cartoon</a>
+                                <a href="./horror.html">Horror Movie</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header> -->
+        <header id="header">
+          <div class="logo">
+            <img src="./assets/filmpire.png" alt="">
+          </div>
+          <nav>
+            <div class="bar" id="toggle-btn">
+              <div class="bar-line"></div>
+              <div class="bar-line"></div>
+              <div class="bar-line"></div>
+            </div>
+            <ul id="nav-links">
+              <li><a href="./first.html">Home</a></li>
+              <li class="btn">                                 
+                <div class="dropdown">
+                  <button class="dropbtn">Categories</button>
+                  <div class="dropdown-content">
+                    <a class="memo" href="./action.html">Action Movies</a>
+                    <a class="memo" href="./nigeria.html">Nigerians Movies</a>
+                    <a class="memo" href="./cartoon.html">Cartoon</a>
+                    <a class="memo" href="./horror.html">Horror Movie</a>
+                  </div>
+                </div>
+              </li>
+              <li id="mobileDropdown">
+                <li><a class="MobileMemo" href="./action.html">Action Movies</a></li>                  
+                <li><a class="MobileMemo" href="./nigeria.html">Nigerians Movies</a></li>
+                <li><a class="MobileMemo" href="./cartoon.html">Cartoon</a></li>
+                <li><a class="MobileMemo" href="./horror.html">Horror Movie</a></li>              
+              </li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+              <li><a href="./chat.html" id="chat-btn">Chat</a></li>
+            </ul>
+          </nav>
+          <div>
+            <a href="./chat.html"><button class="btnchat">Chat</button></a>
+
+          </div>
+        </header>
+      
+        <script src="./JS/horror.js"></script>
+    </section>
+    <div class="banner">
+      <div class="title">Trending Horrors Movies</div>
+      <div class="search-section">
+        <input type="text" id="searchInput" placeholder="Search for a movie...">
+        <div id="searchResults"></div>
+      </div>
+      <div id="title">Trending Horrors Movies</div>
+    </div>
+
+    <section id="movieSection">
+        <div class="dump">
+          <div class="vid-wrap"  data-title="The Nun 1">
+              <img src="./assets/the-nun.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                <source src="./assets/The Nun_720P_480P.mp4" type="video/mp4">
+                <source src="" type="video/ogg">
+              </video>
+              <h2>The Nun 1<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+          </div>
+          <div class="vid-wrap"  data-title="The Nun 2">
+              <img src="./assets/the-nun-02.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="./assets/The Nun II-480P.mp4" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <h2>The Nun 2<span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+          <div class="vid-wrap" data-title="Annabella Comes Home">
+              <img src="./assets/a-b-c-h.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <div><h2>Annabella Comes Home <span></span></h2></div>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+        </div>
+        <div class="dump">
+            <div class="vid-wrap" data-title="Dampyr">
+              <img src="./assets/dampyr-001.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <h2>Dampyr<span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+          <div class="vid-wrap" data-title="The Conjuring">
+            <img src="./assets/con1-pics.jfif" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+              <source src="" type="video/mp4">
+              <source src="" type="video/ogg">
+            </video>
+            <h2>The Conjuring<span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+          <div class="vid-wrap" data-title="Conjuring Curse">
+            <img src="./assets/con-2-pics.jfif" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+              <source src="" type="video/mp4">
+              <source src="" type="video/ogg">
+            </video>
+            <h2>Conjuring Curse<span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+        </div>
+        <div class="dump">
+          <div class="vid-wrap" data-title="Conjuring the Geine">
+              <img src="./assets/con3-pics.jfif" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <h2>Conjuring the Geine <span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+          <div class="vid-wrap" data-title="Conjuring 2">
+              <img src="./assets/con1-1-pics.jfif" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <h2>Conjuring 2<span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+          <div class="vid-wrap" data-title="American Conjuring">
+            <img src="./assets/conA-pics.jfif" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+              <source src="" type="video/mp4">
+              <source src="" type="video/ogg">
+            </video>
+            <h2>American Conjuring<span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+        </div>
+    </section>
+
+    <section id="movieSection">
+        <div class="dump">
+          <div class="vid-wrap" data-title="Conjuring">
+              <img src="./assets/con-beyond.jfif" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+              </video>
+              <h2>Conjuring <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+          </div>
+          <div class="vid-wrap" data-title="Annabella">
+              <img src="./assets/ana-01.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <h2> Annabella <span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+          <div class="vid-wrap" data-title="The Bye Bye Man">
+              <img src="./assets/bye-man.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="./assets/The_Bye_Bye_Man_480P.mp4" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <h2>The Bye Bye Man <span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+        </div>
+        <div class="dump">
+          <div class="vid-wrap" data-title="Psycho">
+              <img src="./assets/pyscho.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <h2> Psycho <span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+          <div class="vid-wrap" data-title="Rosemary's Baby">
+              <img src="./assets/rosemary.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <h2> Rosemary's Baby <span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+          <div class="vid-wrap" data-title="The Shining">
+              <img src="./assets/shining.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <h2> The Shining <span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+        </div>
+        <div class="dump">
+          <div class="vid-wrap" data-title="Truth And Dare">
+              <img src="./assets/truth-dare.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <h2>Truth And Dare<span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+          <div class="vid-wrap" data-title="IT">
+            <img src="./assets/it-001.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+              <source src="" type="video/mp4">
+              <source src="" type="video/ogg">
+            </video>
+            <h2>IT<span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+          <div class="vid-wrap" data-title="The Possesion Of Hannah Of Grace">
+            <img src="./assets/possesion-01.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+              <source src="" type="video/mp4">
+              <source src="" type="video/ogg">
+            </video>
+            <h2>The Possesion Of Hannah Of Grace<span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+        </div>
+    </section>
+
+    <section id="movieSection">
+          <div class="dump">
+            <div class="vid-wrap">
+                <img src="./assets/kromoleo.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>Kromoleo<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/angels.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2> Angels Fallen <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/apocalypse-01.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2> Apocalyse Z <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+          </div>
+          <div class="dump">
+            <div class="vid-wrap">
+                <img src="./assets/black-phone.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2> Black Phone <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/h-o-spoil.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2> House of Spoils  <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/strays.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>The Strays <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+          </div>
+          <div class="dump">
+            <div class="vid-wrap">
+                <img src="./assets/unholy.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+                <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+                </video>
+                <h2> The Unholy <span></span></h2>
+                <a href="" class="watch"><button>watch now</button></a>
+              </div>
+            <div class="vid-wrap">
+                <img src="./assets/g-o-a-01.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2> No one gets out Alive  <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/antrum.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2> Antrum <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+          </div>
+    </section>
+
+    <section id="movieSection">
+          <div class="dump">
+            <div class="vid-wrap">
+                <img src="./assets/outside-001.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2> Outside <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/carries-01.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>Carries<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/hallowen-end.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2 > Hollowen Ends <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+          </div>
+          <div class="dump">
+            <div class="vid-wrap">
+                <img src="./assets/eli-01.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2> Eli <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/legion.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>Legion<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+              <img src="./assets/deliverance.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+              </video>
+              <h2>The Deliverances<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+          </div>
+          <div class="dump">
+            <div class="vid-wrap">
+                <img src="./assets/hunt-01.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2> The Hunt <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/ma-01.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2> Ma <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/d-u-f-d 001.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>Deliver Us From Evil<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+          </div>
+    </section>
+
+    <section id="movieSection">
+          <div class="dump">
+            <div class="vid-wrap">
+                <img src="./assets/bed-rest.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>Bed Rest<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/pope-exorcist.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2> The Pope's Exorcist <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/crawl-001.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2> Crawl <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+          </div>
+          <div class="dump">
+            <div class="vid-wrap">
+                <img src="./assets/under-paris.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>Under Paris<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+              <img src="./assets/alone-001.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+              </video>
+              <h2>Alone<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+              <img src="./assets/nope-001.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+              </video>
+              <h2>Nope<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+          </div>
+          <div class="dump">
+            <div class="vid-wrap">
+                <img src="./assets/the dead dont ide.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>The Dead Don't Die <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/hypnotic-01.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>Hypnotic<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+              <img src="./assets/the-ritual.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+              </video>
+              <h2>The Ritual<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+          </div>
+    </section>
+
+    <section id="movieSection">
+          <div class="dump">
+              <div class="vid-wrap">
+                <img src="./assets/scream-v1.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+                <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+                </video>
+                <h2>Scream VI<span></span></h2>
+                <a href="" class="watch"><button>watch now</button></a>
+              </div>
+            <div class="vid-wrap">
+                <img src="./assets/the-farm.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>The Farm <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/classic-horror.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>A Classic Horror <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+          </div>
+          <div class="dump">
+            <div class="vid-wrap">
+                <img src="./assets/plat-form-01.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>The Platform 1<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/plat-form-02.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>The Platform 2<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/dear-david.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>Dear David <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+          </div>
+          <div class="dump">
+            <div class="vid-wrap">
+                <img src="./assets/black-01.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>Black<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/get-out.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>Get Out <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/consecration.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>Consecration<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+          </div>
+    </section>
+    
+    <section id="movieSection">
+        <div class="dump">
+            <div class="vid-wrap">
+              <img src="./assets/bad nun.jpg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+              </video>
+              <h2>The bad Nun <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+          <div class="vid-wrap">
+              <img src="./assets/the bad nun-watcher.jpg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <h2>The bad Nun <span>Watcher</span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+          <div class="vid-wrap">
+              <img src="./assets/death-whisper.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <h2>Death Whisperer <span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+        </div>
+        <div class="dump">
+          <div class="vid-wrap">
+              <img src="./assets/the-prodigy.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <h2>The Prodigy<span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+          <div class="vid-wrap">
+              <img src="./assets/thr-grudge.jpg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <h2>The Grugde<span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+          <div class="vid-wrap">
+              <img src="./assets/two-pics.jpg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <h2>Two<span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+        </div>
+        <div class="dump">
+          <div class="vid-wrap">
+              <img src="./assets/hellholes.jpg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <h2>HellHoles<span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+          <div class="vid-wrap">
+              <img src="./assets/black-christmas.jpg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <h2>Black Christmas<span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+          <div class="vid-wrap">
+              <img src="./assets/the-conference.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+            </video>
+            <h2>The Conference<span></span></h2>
+            <a href="" class="watch"><button>watch now</button></a>
+          </div>
+        </div>
+    </section>
+
+    <section id="movieSection">
+          <div class="dump">
+            <div class="vid-wrap" data-title="In The Tall Grass">
+              <img src="./assets/in-the-tall-grass.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+             </video>
+             <h2>In The Tall Grass<span></span></h2>
+             <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/fractured.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>Fractured <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/death-whisperer-2.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>Death Whisperer 2<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+          </div>
+          <div class="dump">
+            <div class="vid-wrap">
+                <img src="./assets/the-offering.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>The Offering <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/get-in.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>Get In<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+              <img src="./assets/thanksgiving-pics.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/ogg">
+              </video>
+              <h2>Thanksgiving<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+          </div>
+          <div class="dump">
+            <div class="vid-wrap">
+                <img src="./assets/happy-death-day-2u.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>Happy Death Day 2U<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/totally-killer.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>Totally Killer <span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+            <div class="vid-wrap">
+                <img src="./assets/bloody-red-sky.jpeg" alt="Video Thumbnail" class="thumbnail" onclick="playVideo()">
+              <video width="320" height="240" controls>
+                  <source src="" type="video/mp4">
+                  <source src="" type="video/ogg">
+              </video>
+              <h2>Blood Red Sky<span></span></h2>
+              <a href="" class="watch"><button>watch now</button></a>
+            </div>
+          </div>
+  </section>
+
+  <script>
+    // GSAP Animation for Moving Text
+    gsap.to(".moving-text", { x: "-50vw", duration: 2, ease: "power2.out" });
+  
+    // Video thumbnail click behavior
+    document.addEventListener("DOMContentLoaded", function () {
+      const thumbnails = document.querySelectorAll(".thumbnail");
+  
+      thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener("click", function () {
+          const video = this.nextElementSibling; // Get the video element next to the clicked image
+  
+          if (video) {
+            this.style.display = "none"; // Hide the image
+            video.style.display = "block"; // Show the video
+            video.play(); // Play the video
+          }
+        });
+      });
+    });
+  
+    // Search functionality for movie list
+    const searchInput = document.getElementById("searchInput");
+    const searchResults = document.getElementById("searchResults");
+    const movieSection = document.getElementById("movieSection");
+    const movieBlocks = movieSection.querySelectorAll(".vid-wrap");
+  
+    // Movie list for search (used for matching)
+    const movieTitles = [
+      "The Nun 1",
+      "The Nun 2",
+      "Annabella Comes Home",
+      "Dampyr",
+      "The Conjuring",
+      "Conjuring Curse",
+      "The Conjuring Genie",
+      "Conjuring 2",
+      "American Conjuring",
+      "Conjuring",
+      "Annabella",
+      "The Bye Bye Man",
+      "Psycho",
+      "Rosemary's Baby",
+      "The Shining",
+      "Truth And Dare",
+      "IT",
+      "The Possession Of Hannah Of Grace",
+      "Kromoleo",
+      "Angels Fallen",
+      "In The Tall Grass",
+      "Fractured",
+      "Death Whisperer 2",
+      "The Offering",
+      "Get In",
+      "Thanksgiving",
+      "Happy Death Day 2U",
+      "Totally Killer",
+      "Blood Red Sky"
+    ];
+  
+    // Function to update the search results
+    searchInput.addEventListener("input", function () {
+      const query = this.value.toLowerCase();
+      searchResults.innerHTML = "";
+  
+      if (query === "") {
+        movieBlocks.forEach(block => block.classList.remove("hidden"));
+        return;
+      }
+  
+      const matched = movieTitles.filter(title => title.toLowerCase().includes(query));
+  
+      matched.forEach(title => {
+        const span = document.createElement("span");
+        span.textContent = `[${title}]`;
+        span.addEventListener("click", () => {
+          // Hide the movie block
+          movieBlocks.forEach(block => {
+            if (block.dataset.title === title) {
+              block.classList.add("hidden");
+            }
+          });
+          // Remove the tag
+          span.remove();
+        });
+        searchResults.appendChild(span);
+      });
+  
+      // Hide unmatched movies
+      movieBlocks.forEach(block => {
+        const title = block.dataset.title.toLowerCase();
+        block.classList.toggle("hidden", !title.includes(query));
+      });
+    });
+  
+    // Sticky header and Hamburger Menu
+    const header = document.getElementById('header');
+    const navLinks = document.getElementById('nav-links');
+    const toggleBtn = document.getElementById('toggle-btn');
+  
+    // Toggle sticky header color on scroll
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0) {
+        header.classList.add('sticky');
+        header.classList.remove('transparent');
+      } else {
+        header.classList.add('transparent');
+        header.classList.remove('sticky');
+      }
+    });
+  
+    // Toggle hamburger menu
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      toggleBtn.classList.toggle('open');
+    });
+  
+    document.querySelectorAll(".watch button").forEach(button => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault(); // Prevent any default link behavior
+
+      const vidWrap = this.closest(".vid-wrap"); // Get the parent .vid-wrap
+      const thumbnail = vidWrap.querySelector(".thumbnail"); // Find the thumbnail inside it
+      const video = vidWrap.querySelector("video"); // Find the video inside it
+
+      if (thumbnail && video) {
+        thumbnail.style.display = "none"; // Hide the thumbnail
+        video.style.display = "block"; // Show the video
+        video.play(); // Play the video
+      }
+    });
+  });
+
+  x
+  </script>
+  </body>
+</html>
